@@ -435,7 +435,7 @@ export function BookingForm() {
                             onChange={(e) => handleFlashChange(e.target.value)}
                             className={`w-full bg-neutral-900 border ${
                               formErrors.flash_design_id ? 'border-red-500' : 'border-neutral-800'
-                            } focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] rounded-lg px-4 py-3 text-white focus:outline-none`}
+                        } focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] rounded-lg px-4 py-3 text-white focus:outline-none`}
                           >
                             <option value="">-- Choose available design --</option>
                             {flashDesigns.map((flash) => (
@@ -468,7 +468,7 @@ export function BookingForm() {
                         onChange={(e) => setFormData({ ...formData, idea_description: e.target.value })}
                         placeholder={
                           formData.enquiry_type === 'cover-up'
-                            * 'Describe what you want to cover up, its current state/colors, and what kind of artwork you would prefer to hide it with.'
+                            ? 'Describe what you want to cover up, its current state/colors, and what kind of artwork you would prefer to hide it with.'
                             : formData.enquiry_type === 'flash'
                             ? 'Please specify any custom tweaks or minor changes you would like on the selected flash design.'
                             : 'Describe what you would like to get tattooed. Include elements, style preferences, and any specific meaning behind it.'
